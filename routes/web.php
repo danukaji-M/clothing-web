@@ -32,15 +32,25 @@ Route::get('auth/google/callback', [accountController::class, 'handleGoogleCallb
 //admin controllers
 
 // product controllers
+use App\Http\Controllers\ProductController;
+Route::get('/singleProduct', [ProductController::class, 'singleProduct'])->name('singleProduct');
+//search controllers
+use App\Http\Controllers\searchController;
+Route::get('/search', [searchController::class, 'search'])->name('search');
 
 //cart controllers
-
+use App\Http\Controllers\cartController;
+Route::get('/cart', [cartController::class, 'cart'])->name('cart');
 //order controllers
 
 //payment controllers
-
+use App\Http\Controllers\checkoutController;
+Route::get('/checkout', [checkoutController::class, 'checkout'])->name('checkout');
 //shipping controllers
 
-//live chat controllers
+//public & chat controllers
+use App\Http\Controllers\blogControll;
+Route::get('/blog', [blogControll::class, 'blog'])->name('blog');
+Route::get('/blogDetail', [blogControll::class, 'blogDetail'])->name('blogDetail');
 
 //contact controllers

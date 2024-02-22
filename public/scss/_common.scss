@@ -1,0 +1,275 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body{
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: $poppins;
+    color: $fonts_color;
+    letter-spacing: 0.02em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin-top: 0;
+    font-family: $poppins;
+}
+h1 {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+}
+h2 {
+    font-size: 36px;
+    line-height: 36px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 19px;
+}
+h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+h6 {
+    font-size: 12px;
+    line-height: 14px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+a, button {
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button, img, input, span {
+    transition: all 0.3s ease 0s;
+}
+.btn:focus{
+    box-shadow: none;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+img {max-width:100%;height:auto}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+figure{
+    padding: 0;
+    margin: 0;
+}
+/*-- 
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.hidden {
+    display: none;
+}
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1200px;
+}
+@media #{$large-mobile}{
+    .container {
+        max-width: 576px;
+    }
+}
+@media #{$small-mobile}{
+    .container {
+        width: 100%;
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.no-gutters > .col, .no-gutters > [class*="col-"] {
+	padding-right: 0;
+	padding-left: 0;
+    margin: 0;
+}
+
+/*--
+  -  Fonts color
+------------------------------*/
+.text-black{
+    color: $black;
+}
+
+
+/*-- 
+    - Background color
+-----------------------------------------*/
+.bg-white {
+    background-color: $white;
+}
+
+.bg-grey {
+    background-color: #f8f8f8;
+}
+.bluewood-bg {
+    background: #354b65;
+}
+
+
+
+/*-- 
+    - Input Placeholder
+-----------------------------------------*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*-- 
+    Scroll Up 
+-----------------------------------------*/
+
+#scrollUp {
+	background: $secondary_color none repeat scroll 0 0;
+	bottom: 85px;
+	color: #ffffff;
+	cursor: pointer;
+	display: none;
+	font-size: 20px;
+	height: 45px;
+	line-height: 39px;
+	position: fixed;
+	right: 12px;
+	text-align: center;
+	width: 45px;
+	z-index: 9999;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+     &:hover i {
+        animation-name: fadeInUp;
+        animation-duration:1s;
+        animation-fill-mode:both;
+        animation-iteration-count: infinite;
+    }
+}
+
+
+
+
+/*margin css here*/
+.mb-150{
+    margin-bottom: 150px;
+}
+.mb-140{
+    margin-bottom: 140px;
+}
+.mb-135{
+    margin-bottom: 135px; 
+}
+.mb-130{
+   margin-bottom: 130px; 
+}
+.mb-123{
+    margin-bottom: 123px;
+}
+.mb-118{
+    margin-bottom: 118px;
+}
+.mb-102{
+    margin-bottom: 102px;
+}
+.mb-100{
+    margin-bottom: 100px;
+}
+.mb-109{
+    margin-bottom: 109px;
+}
+.mb-96{
+    margin-bottom: 96px;
+}
+.mb-80{
+    margin-bottom: 80px;
+}
+.mb-63{
+    margin-bottom: 63px;
+}
+.mb-60{
+    margin-bottom: 60px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-35{
+    margin-bottom: 35px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+
+/*padding css here*/
+.pb-100{
+    padding-bottom: 100px;
+}
+
+
+
+

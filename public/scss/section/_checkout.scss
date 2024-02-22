@@ -1,0 +1,546 @@
+/* 14. checkout page css here */
+.user-actions{
+    margin-bottom: 37px;
+    @media #{$large-mobile}{
+       margin-bottom: 20px;
+    }
+    & h3{
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        background-color: #eff1ec;
+        padding: 15px 10px 15px 30px;
+        margin-bottom: 0;
+        color: #999999;
+        @media #{$desktop-device}{
+            font-size: 13px;
+            padding: 15px 10px 15px 20px;
+        }
+        @media #{$tablet-device}{
+            font-size: 13px;
+            padding: 12px 10px 12px 10px;
+        }
+        @media #{$large-mobile}{
+           font-size: 13px;
+            line-height: 24px;
+            padding: 8px 15px;
+        }
+        & i{
+            font-size: 17px;
+        }
+        & a{
+            color: #333333;
+            &:hover{
+                color: $secondary_color;
+            }
+        }
+    }
+}
+
+.checkout_info {
+	border: 1px solid #cccccc;
+	margin-top: 25px;
+	padding: 20px 30px;
+    & p{
+        margin-bottom: 15px;
+        font-weight: 400;
+        color: #666666;
+    }
+    & a{
+       color: $secondary_color;
+        margin-top: 15px;
+        display: block; 
+    }
+    &.coupon_info{
+        @media #{$desktop-device}{
+           padding: 20px 14px;
+        }
+        & form{
+            display: flex;
+            justify-content: center;
+            @media #{$large-mobile}{
+               flex-direction: column;
+            }
+            & input{
+                border: 1px solid #cccccc;
+                background: none;
+                height: 45px;
+                width: 220px;
+                padding: 0 20px;
+                color: #000000;
+                border-radius: 0;
+                margin-right: 20px;
+                @media #{$desktop-device}{
+                    width: 188px;
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+}
+
+.form_group {
+    margin-bottom: 20px;
+    & label{
+       font-size: 14px;
+        line-height: 36px;
+        color: #999999;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+        cursor: pointer;
+        display: block;
+    }
+    & input{
+        border: 1px solid #cccccc;
+        background: none;
+        height: 45px;
+        width: 100%;
+        padding: 0 20px;
+        @media #{$large-mobile}{
+           width: 100%;
+        }
+    }
+    & button{
+        margin-right: 20px;
+    }
+}
+
+
+.form_group input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	position: relative;
+	top: 3px;
+    @media #{$large-mobile}{
+       margin-right: 3px;
+    }
+}
+.form_group.group_3 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    & label{
+        margin-bottom: 0;
+        line-height: 34px;
+        cursor: pointer;
+        &:hover{
+            color: $secondary_color;
+        }
+    }
+}
+
+
+#checkout_coupon{
+    & input{
+        background: none;
+        border: 1px solid #cccccc;
+        width: 200px;
+        height: 45px;
+        font-size: 12px;
+        padding: 0 20px;
+        color: $fonts_color;
+    }
+    & button{
+        width: 130px;
+        background: $fonts_color;
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 13px;
+        cursor: pointer;
+        transition: .3s;
+        border: 0;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 3px;
+        margin-left: 5px;
+        @media #{$large-mobile}{
+           margin-top: 20px;
+        } 
+        &:hover{
+            background: $secondary_color;
+        }
+    }
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+.checkout_form{
+    & h3{
+        font-size: 24px;
+        line-height: 36px;
+        color:  #000000;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        @media #{$tablet-device}{
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        } 
+        @media #{$large-mobile}{
+           font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 14px;
+        }
+    }
+    & p{
+        font-size: 14px;
+        font-weight: 500;
+        & i{
+            font-size: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+}
+
+.checkout_form_input{
+    margin-bottom: 10px;
+    & input{
+        border: 1px solid #cccccc;
+        background: none;
+        height: 54px;
+        width: 100%;
+        padding: 0 20px;
+        color: $fonts_color;
+        border-radius: 0;
+        @media #{$tablet-device}{
+            height: 40px;
+        }
+        @media #{$large-mobile}{
+            height: 40px;
+        }
+    }
+    & textarea{
+        width: 100%;
+        height: 144px;
+        border: 1px solid #cccccc;
+        resize: none;
+        @media #{$large-mobile}{
+           height: 110px;
+        }
+    }
+    & .select_option{
+        width:100%; 
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 0;
+        margin-bottom: 10px;
+        height: 54px;
+        line-height: 52px;
+        border: 1px solid #cccccc;
+        @media #{$tablet-device}{
+            height: 40px;
+            line-height: 40px;
+        }
+        @media #{$large-mobile}{
+            height: 40px;
+            line-height: 40px;
+        }
+        & ul.list{
+            width:100%;
+            height: 180px;
+            overflow: auto;
+        }
+        &::after{
+            top: 56%;
+        }
+    }
+    & label{
+        font-size: 14px;
+        line-height: 36px;
+        color: #999999;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+        cursor: pointer;
+        @media #{$large-mobile}{
+            font-size: 13px;
+            line-height: 26px;
+        }
+        & span{
+            color: #ff3333;
+        }
+        &.righ_0,{
+            cursor: pointer;
+            font-size: 15px;
+            line-height: 27px;
+            padding: 5px 10px;
+            text-transform: capitalize;
+            color: $white;
+            background: $fonts_color;
+            font-weight: 600;
+            transition: .3s;
+            margin-bottom: 0;
+            border-radius: 5px;
+            @media #{$large-mobile}{
+                font-size: 13px;
+                line-height: 25px;
+                padding: 3px 10px;
+            }
+            &:hover{
+                background: $fonts_color;
+            }
+        }
+    }
+}
+.checkout_form input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
+	position: relative;
+	top: 2px;
+	margin-right: 10px;
+}
+.order_button{
+    & button{
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 30px;
+        padding: 5px 10px;
+        text-transform: capitalize;
+        color: $white;
+        background: $secondary_color;
+        font-weight: 600;
+        transition: .3s;
+        margin-bottom: 0;
+        border-radius: 5px;
+        @media #{$large-mobile}{
+            font-size: 14px;
+        }
+        &:hover{
+            background: $fonts_color;
+        }
+    }
+}
+
+
+.order-notes {
+    @media #{$large-mobile}{
+        margin-bottom: 58px;
+    }
+    & textarea{
+        border: 1px solid #e5e5e5;
+        border-radius: 0;
+        height: 45px;
+        max-width: 100%;
+        padding: 0 30px 0 20px;
+        background: none;
+        font-size: 13px;
+        resize: none;
+        line-height: 45px;
+        width: 100%;
+        color: $fonts_color; 
+    }
+    & label{
+        line-height: 13px;
+    }
+}
+
+
+.checkout_section {
+	margin-bottom: 158px;
+    @media #{$tablet-device}{
+        margin-bottom: 68px;
+    }
+    @media #{$large-mobile}{
+        margin-bottom: 60px;
+    }
+}
+.order_table{
+    margin-bottom: 35px;
+    background: #eff1ec;
+    padding: 40px 35px;
+    @media #{$tablet-device}{
+        padding: 20px 20px 10px;
+    }
+    @media #{$large-mobile}{
+        margin-bottom: 20px;
+        padding: 15px 18px;
+    }
+    & table{
+        width: 100%;
+        margin-bottom: 25px;
+        & thead{
+            & tr{
+                & th{
+                    font-size: 14px;
+                    color: #999999;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    min-width: 50%;
+                    padding: 15px 0;
+                    border-bottom: 1px solid #ddd;
+                }
+                
+            }
+        }
+        & tbody{
+            & tr{
+                & td{
+                    font-size: 14px;
+                    color: #000000;
+                    font-weight: 400;
+                    min-width: 50%;
+                    padding: 15px 0;
+                    @media #{$large-mobile}{
+                        font-size: 13px;
+                        min-width: 50%;
+                        padding: 9px 0;
+                    }
+                }
+            }
+        }
+        & tfoot{
+            & tr{
+                & td{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #000000;
+                    min-width: 50%;
+                    padding: 15px 0 25px;
+                    border-bottom: 1px solid #ddd;
+                    @media #{$large-mobile}{
+                        font-size: 15px;
+                        padding: 10px 0 13px;
+                    }
+                }
+                &.order_total{
+                    & th{
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        color: #000000;
+                        font-weight: 500;
+                        min-width: 50%;
+                        padding: 25px 0;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    & td{
+                        font-size: 24px;
+                        color: #cc3333;
+                        font-weight: 600;
+                        min-width: 50%;
+                        padding: 25px 0;
+                        border-bottom: 1px solid #ddd;
+                        @media #{$large-mobile}{
+                            font-size: 15px;
+                            padding: 10px 0 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.panel_radio{
+    position: relative;
+    & input{
+            position: absolute;
+                top: 13px;
+            transform: translatey(-50%);
+            opacity: 0;
+            cursor: pointer;
+            z-index: 999;
+            width: 18px;
+            height: 18px;
+            &:checked ~ .checkmark{
+                &::before{
+                    display: block;
+                }
+            }
+        }
+            & span{
+                background: #fff;
+                border: 2px solid #000;
+                &.checkmark{
+                   height: 18px;
+                    width: 18px;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 12px;
+                    transform: translatey(-50%);
+                    transition: .3s;
+                    &::before{
+                        left: 2px;
+                        top: 2px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #000000;
+                        border-width: 0 2px 2px 0;
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        
+                    }
+                }
+            }
+}
+
+.panel-default{
+    margin-bottom: 20px;
+    & label{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 0;
+        cursor: pointer;
+        padding-left: 32px;
+        @media #{$large-mobile}{
+            font-size: 14px;
+        }
+    }
+    & .card-body1{
+        padding-left: 30px;
+        padding-top: 14px;
+        @media #{$large-mobile}{
+            padding-left: 25px;
+            padding-top: 6px;
+        }
+        & p{
+            font-size: 13px;
+            line-height: 24px;
+            color: #666666;
+            font-weight: 400;
+        }
+    }
+    
+}
+
+.place_order_btn{
+     & a{
+        display: block;
+        font-size: 18px;
+        padding: 0 45px;
+        height: 66px;
+        line-height: 66px;
+        text-transform: uppercase;
+        @media #{$desktop-device}{
+            padding: 0 30px;
+        }
+        @media #{$large-mobile}{
+            height: 47px;
+            line-height: 47px;
+            font-size: 14px;
+        }
+        @media #{$small-mobile2}{
+            padding: 0 20px;
+        }
+    }
+}
+.order_table_right{
+    @media #{$large-mobile}{
+        margin-top: 42px;
+    }
+}
+/*checkout page css end*/

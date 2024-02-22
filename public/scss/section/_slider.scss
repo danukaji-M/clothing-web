@@ -1,0 +1,345 @@
+/* 02. slider area css here */
+.slider_section{
+    padding-top: 38px;
+    @media #{$desktop-device}{
+       padding-top: 105px;
+    }
+    @media #{$tablet-device}{
+       padding-top: 0;
+    }
+    @media #{$large-mobile}{
+        padding-top: 0;
+    }
+    &.mb-63{
+        @media #{$large-mobile}{
+            margin-bottom: 55px;
+        }
+    }
+}
+
+.single_slider{
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; 
+    position: relative;
+    min-height: 960px;
+    @media #{$laptop-device}{
+        min-height: 900px;
+    }
+    @media #{$desktop-device}{
+        min-height: 700px;
+    }
+    @media #{$tablet-device}{
+       min-height: 470px;
+    }
+    @media #{$large-mobile}{
+        min-height: 400px;
+    }
+    @media #{$small-mobile2}{
+        background-position: 14%;
+        min-height: 372px;
+    }
+}
+
+.slider_text{
+    @media #{$mini-laptop-device }{
+        padding-left: 55px;
+    }
+    @media #{$desktop-device}{
+        padding-left: 48px;
+    }
+    @media #{$tablet-device}{
+        padding-left: 48px;
+    }
+    @media #{$large-mobile}{
+        padding-left: 34px;
+    }
+    @media #{$small-mobile2}{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    & span{
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        @media #{$desktop-device}{
+            margin-bottom: 20px;
+        }
+        @media #{$tablet-device}{
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 14px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 12px;
+        }
+        @media #{$small-mobile2}{
+            font-size: 13px;
+        }
+    }
+    & h1{
+        font-size: 60px;
+        line-height: 72px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 30px;
+        @media #{$mini-laptop-device }{
+            font-size: 56px;
+            line-height: 68px;
+        }
+        @media #{$desktop-device}{
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 20px;
+        }
+        @media #{$tablet-device}{
+            font-size: 30px;
+            line-height: 41px;
+            margin-bottom: 16px;
+        }
+        @media #{$large-mobile}{
+            font-size: 23px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            padding-right: 200px;
+        }
+        @media #{$small-mobile2}{
+            padding-right: 0;
+            font-size: 19px;
+            line-height: 29px;
+            margin-bottom: 8px;
+        }
+    }
+    & p{
+        font-size: 16px;
+        line-height: 26px;
+        color: #666666;
+        margin-bottom: 0;
+        @media #{$tablet-device}{
+            font-size: 15px;
+            line-height: 25px;
+        }
+        @media #{$large-mobile}{
+            font-size: 15px;
+            line-height: 23px;
+        }
+        @media #{$small-mobile2}{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    & a.btn-primary{
+        margin-top: 53px;
+        font-size: 18px;
+        line-height: 56px;
+        height: 56px;
+        padding: 0 32px;
+        @media #{$desktop-device}{
+            margin-top: 35px;
+        }
+        @media #{$tablet-device}{
+            margin-top: 29px;
+            font-size: 16px;
+            line-height: 50px;
+            height: 50px;
+            padding: 0 22px;
+        }
+        @media #{$large-mobile}{
+            margin-top: 28px;
+            font-size: 15px;
+            line-height: 46px;
+            height: 46px;
+            padding: 0 22px;
+        }
+        @media #{$small-mobile2}{
+            margin-top: 21px;
+            font-size: 14px;
+            line-height: 42px;
+            height: 42px;
+            padding: 0 17px;
+        }
+        &:hover{
+            color: #000000;
+        }
+        &::before{
+            background: #fff;
+        }
+    }
+}
+
+.slick-current .slider_text h1,.slick-current .slider_text span,.slick-current .slider_text a,.slick-current .slider_text p{
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.slick-current .slider_text h1{
+     -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.slick-current .slider_text p{
+     -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+.slick-current .slider_text a{
+     -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+
+.slider_area {
+    &:hover{
+        & > button{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    & > button{
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        left: 70px;
+        z-index: 9;
+        width: 50px;
+        height: 52px;
+        line-height: 57px;
+        text-align: center;
+        font-size: 24px;
+        background: #fff;
+        color: $fonts_color;
+        border: 0;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        &:hover{
+            background: #6a7964;
+            color: #fff;
+        }
+        @media #{$laptop-device}{
+            left: 20px;
+        }
+        @media #{$mini-laptop-device }{
+            width: 45px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 22px;
+        }
+        @media #{$desktop-device}{
+            left: 20px;
+            width: 42px;
+            height: 44px;
+            line-height: 46px;
+            font-size: 20px;
+        }
+        @media #{$tablet-device}{
+            left: 20px;
+            width: 35px;
+            height: 37px;
+            line-height: 39px;
+            font-size: 16px;
+        }
+        @media #{$large-mobile}{
+            left: 15px;
+            width: 32px;
+            height: 34px;
+            line-height: 35px;
+            font-size: 15px;
+        }
+        @media #{$small-mobile2}{
+            left: 6px;
+            width: 26px;
+            height: 28px;
+            line-height: 31px;
+            font-size: 14px;
+        }
+        &.next_arrow {
+            right: 70px;
+            left: auto;
+            @media #{$laptop-device}{
+                right: 20px;
+            }
+            @media #{$desktop-device}{
+                right: 20px;
+            }
+            @media #{$tablet-device}{
+                right: 20px;
+            }
+            @media #{$large-mobile}{
+                right: 15px;
+            }
+            @media #{$small-mobile2}{
+                right: 6px;
+            }
+        }
+    }
+    & .slick-dots{
+        display: flex;
+        position: absolute;
+        bottom: 57px;
+        left: 50%;
+        transform: translatex(-50%);
+        @media #{$tablet-device}{
+            bottom: 20px;
+        }
+        @media #{$large-mobile}{
+            bottom: 15px;
+        }
+        & li{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+            @media #{$tablet-device}{
+                margin-right: 10px;
+            }
+            @media #{$small-mobile2}{
+                margin-right: 8px;
+            }
+            &.slick-active{
+                & button{
+                    background: #000000;
+                }
+            }
+            & button{
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 0;
+                padding: 0;
+                background: #b8b8b8;
+                text-indent: -99999px;
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

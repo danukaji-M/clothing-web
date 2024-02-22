@@ -1,0 +1,49 @@
+// Font Family
+$poppins: 'Poppins', sans-serif;
+$merriweather: 'Merriweather', serif;
+
+*{
+    box-sizing: border-box;
+}
+
+
+// Colors ---------------
+
+// Theme Color
+
+$fonts_color: #000000;
+
+
+
+$secondary_color: #6a7964;
+$secondary_color2: #ff9806;
+
+
+$white: #ffffff;
+$black: #000000;
+
+// Dark Color
+$grey_color: #ededed;
+
+// Body Color
+$body-color: #fff;
+
+
+
+
+
+
+
+
+
+// Responsive Variables
+$extrabig-device : 'only screen and (min-w idth: 1600px)';
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$mini-laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1300px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$small-mobile3:'only screen and (min-width: 430px) and (max-width: 575px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile2: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
