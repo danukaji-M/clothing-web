@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta content="authenticity_token" name="csrf-param" />
-    <meta content="4sWPhTlJAmt1IcyNq1FCyivsAVhHqjiDCKRXOgOQock=" name="csrf-token" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <meta name="description"
         content="Uthr Fashion eCommerce Bootstrap 5 Template is an innovative and modern e-commerce online store website template." />
@@ -36,12 +35,12 @@
 
     <!-- CSS
 ========================= -->
-    <link rel="stylesheet" href="{{ asset('css/simple-line-icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/font.awesome.css') }}" />
+    <link rel="stylesheet" href="netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}" />
@@ -59,9 +58,8 @@
     {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    "name": "Replace_with_your_site_title",
-    "url": "Replace_with_your_site_URL"
-    }
+    "name": "clothing",
+    "url": "127.0.0.1:8000"}
 </script>
 
 </head>
@@ -80,10 +78,9 @@
     <script src="{{ asset('js/jquery.nice-select.js') }}"></script>
     <script src="{{ asset('js/tippy-bundle.umd.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.instagramFeed.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('js/mailchimp-ajax.js') }}"></script>
-    <script src="{{ asset('js\tippy-bundle.umd.js') }}"></script>
+    <script src="{{ asset('js/tippy-bundle.umd.js') }}"></script>
 
     <!-- Main JS -->
     <script src="{{ asset('js/main.js') }}"></script>

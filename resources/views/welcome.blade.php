@@ -155,7 +155,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="modal_zoom_gallery">
                                     <div class="product_zoom_thumb">
-                                        <img src="assets/img/product/big-product/product1.png" alt="">
+                                        <img src="{{asset('img/product/big-product/product1.png')}}" alt="">
                                     </div>
                                 </div>
                             </div>

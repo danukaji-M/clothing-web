@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
 use SoapClient;
+use Tests\TestCase;
 use Laravel\Socialite\Facades\Socialite;
 
 class accountController extends Controller
@@ -126,20 +127,19 @@ class accountController extends Controller
                 // Return success response
                 return response()->json(['status' => 'Success']);
             }
-                    // Return error response
-        return response()->json(['error' => 'Invalid email or password']);
+            // Return error response
+            return response()->json(['error' => 'Invalid email or password']);
         }
         return view('login');
-
     }
-    
+
     //google login redirrect
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
-    
-    
+
+
     public function handleGoogleCallBack()
     {
         $user = Socialite::driver('google')->user();
@@ -151,5 +151,12 @@ class accountController extends Controller
             return redirect('/signup');
         }
     }
-        
+
+    //logout function
+
+    //user Account function 
+    public function userAccount(Request $request)
+    {
+        return view('userAccount');
+    }
 }

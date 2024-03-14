@@ -93,7 +93,7 @@
         </div>
         <div class="cart_item">
             <div class="cart_img">
-                <a href="#"><img src="assets/img/product/product1.jpg" alt=""></a>
+                <a href="#"><img src="{{asset('img/product/product1.jpg')}}" alt=""></a>
             </div>
             <div class="cart_info">
                 <a href="#">Primis In Faucibus</a>
@@ -105,7 +105,7 @@
         </div>
         <div class="cart_item">
             <div class="cart_img">
-                <a href="#"><img src="assets/img/product/product2.jpg" alt=""></a>
+                <a href="#"><img src="{{asset('img/product/product2.jpg')}}" alt=""></a>
             </div>
             <div class="cart_info">
                 <a href="#">Letraset Sheets</a>
@@ -130,10 +130,10 @@
     </div>
     <div class="mini_cart_footer">
         <div class="cart_button">
-            <a href="cart.html"><i class="fa fa-shopping-cart"></i> View cart</a>
+            <a href="{{asset('/cart')}}"><i class="bi bi-cart"></i> View cart</a>
         </div>
         <div class="cart_button">
-            <a href="checkout.html"><i class="fa fa-sign-in"></i> Checkout</a>
+            <a href="{{asset('/checkout')}}"><i class="bi bi-cash"></i> Checkout</a>
         </div>
     </div>
 </div>
@@ -195,7 +195,7 @@
                             <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
                         </div>
                         <div class="header_logo">
-                            <a class="sticky_none" href="index.html"><img src="{{ asset('img/logo/logo.png') }}"
+                            <a class="sticky_none" href="/"><img src="{{ asset('img/logo/logo.png') }}"
                                     alt=""></a>
                         </div>
                         <!--main menu start-->
@@ -224,8 +224,17 @@
                                 </li>
                                 <li class="account_link"><a href="#"><i class="bi bi-person"></i></a>
                                     <ul class="dropdown_account_link">
-                                        <li><a href="#">My Account</a></li>
-                                        <li><a href="#">Login</a></li>
+                                        <li><a href="{{asset('/myAccount')}}">My Account</a></li>
+                                        @php
+                                        if (session()->has('user')) {
+                                            echo
+                                            '<li><a href="'.asset('/logout').'">Logout</a></li>';
+                                        }else{
+                                            echo
+                                            '<li><a href="'.asset('/signin').'">Login</a></li>';
+                                        }
+                                        @endphp
+                                        
                                         <li><a href="#">Contact</a></li>
                                     </ul>
                                 </li>

@@ -114,10 +114,14 @@ function createAccount() {
     xhr.send(data);
 }
 
-function login(){
-    let csrfToken = document
-        .querySelector('meta[name="csrf-token"]')
-        .getAttribute("content");
+function login() {
+    let csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
+    if (!csrfTokenMeta) {
+        console.error("CSRF token meta tag not found");
+        return;
+    }
+    let csrfToken = csrfTokenMeta.getAttribute("content");
+
     var email = document.getElementById("email").value;
     var ps = document.getElementById("ps").value;
     var formCheck = document.getElementById("formCheck").checked;
@@ -128,24 +132,68 @@ function login(){
     var data = JSON.stringify({
         email: email,
         password: ps,
-        cookies: cookies
+        cookies: cookies,
     });
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
-        if(xhr.readyState == 4 && xhr.status == 200){
+        if (xhr.readyState == 4 && xhr.status == 200) {
             var response = xhr.responseText;
             jsone = JSON.parse(response);
-            if(jsone.status == "Success"){
+            if (jsone.status == "Success") {
                 window.location.href = "/";
-            }else{
+            } else {
                 console.log(jsone.error);
                 alert(jsone.error);
             }
         }
-    }
+    };
     xhr.open("POST", "/signinProcess", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-CSRF-TOKEN", csrfToken);
     xhr.send(data);
+}
+const fileSet = false;
+function addProduct() {
+    let csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
+    if (!csrfTokenMeta) {
+        console.error("CSRF token meta tag not found");
+        return;
+    }
+    var formData = new FormData();
+    let csrfToken = csrfTokenMeta.getAttribute("content");
+
+    alert("addProduct");
+    var name = document.getElementById("product-name").value;
+    var price = document.getElementById("product-price").value;
+    var description = document.getElementById("product-description").value;
+    var Pfiles = document.getElementById("files").files;
+    var category = document.getElementById("product-category").value;
+    var brand = document.getElementById("product-brand").value;
+    var color = document.getElementById("product-color").value;
+    var quantity = document.getElementById("product-quantity").value;
+    var shipping = document.getElementById("shipping").value;
+    var size = document.getElementById("size").value;
+    for(var i = 0; i < 3; i++){
+        formData.append("file[]", Pfiles[i]);
+    }
+    formData.append("name", name);
+    formData.append("price", price);
+    formData.append("description", description);
+    formData.append("category", category);
+    formData.append("brand", brand);
+    formData.append("color", color);
+    formData.append("quantity", quantity);
+    formData.append("shipping", shipping);
+    formData.append("size", size);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = xhr.responseText;
+            console.log(response);
+        }
+    };
+    xhr.open("POST", "/addProductProcess", true);
+    xhr.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+    xhr.send(formData);
 
 }

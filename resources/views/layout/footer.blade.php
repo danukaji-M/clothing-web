@@ -4,7 +4,7 @@
             <div class="col-lg-5 col-md-5 col-sm-5">
                 <div class="footer_widget_list">
                     <div class="footer_logo">
-                        <a href="#"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="#"><img src="{{asset('img/logo/logo.png')}}" alt=""></a>
                     </div>
                     <div class="footer_contact">
                         <div class="footer_contact_list">

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Tests\TestCase;
+
 use Illuminate\Http\Request;
 
-class checkoutController extends Controller
+class orderController extends Controller
 {
-    public function checkout(Request $request)
+    public function order(Request $request)
     {
         return view('checkout');
     }
