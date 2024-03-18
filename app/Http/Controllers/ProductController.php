@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Tests\TestCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,12 +17,12 @@ class ProductController extends Controller
     }
     public function addProduct(Request $req)
     {
-        $product_id= [];
+        $product_id = [];
         $colors = DB::select("SELECT * FROM `colors`");
         $brand = DB::select("SELECT * FROM `brand`");
         $category = DB::select("SELECT * FROM `category`");
         $sizes = DB::select("SELECT * FROM `sizes`");
-       
+
         //addProductProcess
         if ($req->isMethod('post')) {
             $validator = Validator::make($req->all(), [
@@ -67,14 +68,14 @@ class ProductController extends Controller
                 AND `email` = '$email' 
                 AND id = (SELECT MAX(id) FROM `product`)
                 ");
-                if($product){
+                if ($product) {
                     $product_id = $product[0]->id;
                 }
                 try {
                     DB::insert("
                     INSERT INTO 
                     `product_has_color`(`product_id`,`color_id`)
-                    VALUES ('" . $product_id. "','" . $color . "')");
+                    VALUES ('" . $product_id . "','" . $color . "')");
                     DB::insert("
                     INSERT INTO `product_has_size`(`product_id`,`size_id`) 
                     VALUES ('32','" . $size . "')");
@@ -83,7 +84,7 @@ class ProductController extends Controller
                         if ($files[$i] != null) {
                             $file = $files[$i];
                             $filleExt = $file->getClientOriginalExtension();
-                            $fileName = $email."_".uniqid()."_".$name.".".$filleExt;
+                            $fileName = $email . "_" . uniqid() . "_" . $name . "." . $filleExt;
                             $file->move('img/product', $fileName);
                             try {
                                 DB::insert("

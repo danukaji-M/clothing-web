@@ -7,36 +7,22 @@
                 </div>
                 <div class="product_tab_btn d-flex">
                     <ul class="nav" role="tablist">
+
                         <li>
                             <a class="active" data-toggle="tab" href="#all" role="tab" aria-controls="all"
                                 aria-selected="true">
                                 All
                             </a>
                         </li>
+                        @foreach ($categories as $category)
                         <li>
                             <a data-toggle="tab" href="#clothings" role="tab" aria-controls="clothings"
                                 aria-selected="false">
-                                Clothings
+                                {{ $category->category_name }}
                             </a>
                         </li>
-                        <li>
-                            <a data-toggle="tab" href="#bags" role="tab" aria-controls="bags"
-                                aria-selected="false">
-                                Bags
-                            </a>
-                        </li>
-                        <li>
-                            <a data-toggle="tab" href="#shoes" role="tab" aria-controls="shoes"
-                                aria-selected="false">
-                                Shoes
-                            </a>
-                        </li>
-                        <li>
-                            <a data-toggle="tab" href="#accessories" role="tab" aria-controls="accessories"
-                                aria-selected="false">
-                                Accessories
-                            </a>
-                        </li>
+                            <p></p>
+                        @endforeach
                     </ul>
                     <div class="all_product">
                         <a href="shop.html">All Product</a>
